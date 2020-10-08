@@ -1,0 +1,6 @@
+<div>
+    <input placeholder="filter todo items" [(ngModel)]="filterInput" />
+    <app-todo-item (remove)="removeItem($event)" *ngFor="let item of filter()" [todoItem]="item"></app-todo-item>
+    <input placeholder="add" [(ngModel)]="addItemInput" />
+    <button (click)="addItem()">Add</button> 
+</div>
